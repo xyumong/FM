@@ -44,7 +44,6 @@ cost=tf.reduce_sum(tf.square(y_fm-y_))
 batch_fl=tf.cast(batch,tf.float32)  
 auc=tf.reduce_mean(tf.sign(tf.multiply(y_fm,y_)))         
 train_op=tf.train.AdamOptimizer(learning_rate=0.1).minimize(cost)  
- 
   
 with tf.Session() as sess:  
     sess.run(tf.global_variables_initializer())  
